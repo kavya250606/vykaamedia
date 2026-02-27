@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vykaa Media | Brand Collaboration & Community Management Agency</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Vykaa Media is a premium brand collaboration and community management agency offering content creation services, Instagram marketing services, reels and video content creation, and social media management for businesses.">
+  <meta name="keywords" content="brand collaboration agency, community management agency, content creation services, social media marketing agency, Instagram marketing services, reels and video content creation, social media management for businesses">
+  <meta name="author" content="Vykaa Media">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vykaamedia.com">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vykaa Media | Brand Collaboration & Community Management Agency">
+  <meta property="og:description" content="Results-driven brand collaborations and community management agency helping businesses grow with powerful content creation, strategic partnerships, and smart social media management.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vykaamedia.com">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-primary: #050a14;
+      --bg-secondary: #0a1628;
+      --bg-card: #0d1b33;
+      --bg-card-hover: #112240;
+      --accent: #6c63ff;
+      --accent-light: #8b83ff;
+      --accent-glow: rgba(108, 99, 255, 0.3);
+      --gold: #f0c040;
+      --gold-light: #ffd966;
+      --text-primary: #ffffff;
+      --text-secondary: #b4bcd0;
+      --text-muted: #7a8599;
+      --border: rgba(108, 99, 255, 0.15);
+      --border-light: rgba(255, 255, 255, 0.06);
+      --gradient-accent: linear-gradient(135deg, #6c63ff, #a78bfa);
+      --gradient-gold: linear-gradient(135deg, #f0c040, #fbbf24);
+      --gradient-hero: linear-gradient(160deg, #050a14 0%, #0d1b33 40%, #131a35 70%, #0a1628 100%);
+      --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+      --shadow-glow: 0 0 40px rgba(108, 99, 255, 0.15);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0 5%;
+      transition: var(--transition);
+    }
+
+    .header.scrolled {
+      background: rgba(5, 10, 20, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 55px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text span {
+      color: var(--accent-light);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: var(--transition);
+      letter-spacing: 0.2px;
+    }
+
+    .nav a:hover {
+      color: var(--text-primary);
+      background: rgba(108, 99, 255, 0.1);
+    }
+
+    .nav-cta {
+      background: var(--gradient-accent) !important;
+      color: #fff !important;
+      font-weight: 600 !important;
+      padding: 10px 24px !important;
+      border-radius: 50px !important;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      margin: 6px 0;
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      padding: 100px 5%;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 16px;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--gradient-accent);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--gradient-hero);
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 50%, rgba(108, 99, 255, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 30%, rgba(167, 139, 250, 0.06) 0%, transparent 40%),
+                  radial-gradient(circle at 50% 80%, rgba(240, 192, 64, 0.04) 0%, transparent 40%);
+      animation: heroGlow 15s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroGlow {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(-2%, 2%) rotate(3deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      background: rgba(108, 99, 255, 0.12);
+      border: 1px solid rgba(108, 99, 255, 0.25);
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent-light);
+      margin-bottom: 32px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-badge i {
+      font-size: 11px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 .highlight {
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      font-size: clamp(16px, 2.2vw, 19px);
+      color: var(--text-secondary);
+      max-width: 720px;
+      margin: 0 auto 44px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      background: var(--gradient-accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px var(--accent-glow);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      background: transparent;
+      color: var(--text-primary);
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      background: rgba(108, 99, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-number {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+    }
+
+    .hero-stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ===== VALUE PROPOSITION ===== */
+    .value-prop {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .value-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .value-text .big-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.5;
+      margin-bottom: 24px;
+      position: relative;
+      padding-left: 24px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .value-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .value-feature {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .value-feature-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 12px;
+      background: rgba(108, 99, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-light);
+      font-size: 18px;
+    }
+
+    .value-feature h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .value-feature p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ===== WHY VYKAA ===== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .why-card {
+      padding: 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-accent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(108, 99, 255, 0.3);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .why-card:hover::before {
+      opacity: 1;
+    }
+
+    .why-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(108, 99, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-light);
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .why-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .service-card {
+      padding: 40px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(108, 99, 255, 0.3);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: rgba(108, 99, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: var(--accent-light);
+      margin-bottom: 24px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .service-tag {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(240, 192, 64, 0.12);
+      color: var(--gold-light);
+      border-radius: 6px;
+      border: 1px solid rgba(240, 192, 64, 0.2);
+    }
+
+    /* ===== PRICING ===== */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      padding: 40px 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: var(--transition);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--accent);
+      background: linear-gradient(180deg, rgba(108, 99, 255, 0.08) 0%, var(--bg-card) 100%);
+      transform: scale(1.03);
+    }
+
+    .pricing-card.featured:hover {
+      transform: scale(1.03) translateY(-4px);
+    }
+
+    .pricing-popular {
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 20px;
+      background: var(--gradient-accent);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .pricing-name {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 16px;
+    }
+
+    .pricing-price {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -1px;
+      margin-bottom: 4px;
+    }
+
+    .pricing-price span {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .pricing-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 32px;
+      flex-grow: 1;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .pricing-features li i {
+      color: var(--accent-light);
+      font-size: 14px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .pricing-btn {
+      display: block;
+      text-align: center;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      letter-spacing: 0.3px;
+    }
+
+    .pricing-btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      background: transparent;
+    }
+
+    .pricing-btn-outline:hover {
+      border-color: var(--accent);
+      background: rgba(108, 99, 255, 0.08);
+    }
+
+    .pricing-btn-filled {
+      background: var(--gradient-accent);
+      color: #fff;
+      border: none;
+    }
+
+    .pricing-btn-filled:hover {
+      box-shadow: 0 4px 20px var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    .pricing-addon {
+      text-align: center;
+      margin-top: 40px;
+      padding: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .pricing-addon p {
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
+    .pricing-addon strong {
+      color: var(--gold-light);
+    }
+
+    /* ===== FOUNDER ===== */
+    .founder-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 400px 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 48px;
+    }
+
+    .founder-image {
+      position: relative;
+    }
+
+    .founder-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center 25%;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      image-rendering: auto;
+      -webkit-image-rendering: auto;
+    }
+
+    .founder-image::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      right: -12px;
+      width: 100%;
+      height: 80%;
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .founder-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .founder-role {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent-light);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .founder-role::before {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .founder-bio {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+    }
+
+    .founder-bio p {
+      margin-bottom: 16px;
+    }
+
+    /* ===== WHO WE WORK WITH ===== */
+    .clients-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 40px;
+    }
+
+    .client-tag {
+      padding: 14px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .client-tag:hover {
+      border-color: var(--accent);
+      color: var(--text-primary);
+      background: rgba(108, 99, 255, 0.08);
+    }
+
+    .client-tag i {
+      margin-right: 8px;
+      color: var(--accent-light);
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      text-align: center;
+      background: var(--bg-secondary);
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(108, 99, 255, 0.1) 0%, transparent 60%);
+      border-radius: 50%;
+    }
+
+    .final-cta .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .final-cta .section-title {
+      font-size: clamp(32px, 5vw, 52px);
+    }
+
+    .final-cta p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 60px 5% 30px;
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 320px;
+      line-height: 1.7;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 16px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-social a:hover {
+      background: rgba(108, 99, 255, 0.15);
+      border-color: var(--accent);
+      color: var(--accent-light);
+    }
+
+    .footer-links h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      padding: 6px 0;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-light);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      margin-top: 0;
+    }
+
+    .footer-bottom p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 460px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .pricing-card.featured {
+        transform: none;
+      }
+
+      .pricing-card.featured:hover {
+        transform: translateY(-4px);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .founder-image {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .founder-role {
+        justify-content: center;
+      }
+
+      .value-content {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 72px 5%;
+      }
+
+      .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        padding: 100px 32px 40px;
+        gap: 4px;
+        transition: right 0.3s ease;
+        border-left: 1px solid var(--border-light);
+      }
+
+      .nav.open {
+        right: 0;
+      }
+
+      .nav a {
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 16px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero-stats {
+        gap: 24px;
+      }
+
+      .hero-stat-number {
+        font-size: 22px;
+      }
+
+      .value-features {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .clients-tags {
+        justify-content: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 32px;
+        letter-spacing: -0.5px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <img src="logo.png" alt="Vykaa Media Logo">
+        <span class="logo-text">Vykaa<span>Media</span></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#founder">Founder</a>
+        <a href="#contact" class="nav-cta">Contact Us</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-bolt"></i>
+        Brand Collaborations & Community Management Agency
+      </div>
+      <h1>Create. Collaborate.<br>Captivate. <span class="highlight">Convert.</span></h1>
+      <p class="hero-description">Vykaa Media is a results-driven brand collaborations and community management agency helping businesses grow with powerful content creation, strategic partnerships, and smart social media management.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">
+          Get Started
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#services" class="btn-secondary">
+          Explore Services
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-number">4+</div>
+          <div class="hero-stat-label">Years Experience</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">50+</div>
+          <div class="hero-stat-label">Brands Served</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">500+</div>
+          <div class="hero-stat-label">Content Pieces</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALUE PROPOSITION ===== -->
+  <section class="section value-prop" id="about">
+    <div class="container">
+      <div class="value-content fade-in">
+        <div class="value-text">
+          <span class="section-label">Why Brands Choose Us</span>
+          <div class="big-quote">From scroll-stopping creatives to engagement that converts, we help your brand stand out, stay relevant, and scale faster.</div>
+          <p class="section-subtitle">We combine creative storytelling with data-driven strategy to deliver content that not only looks premium but performs. Every post, reel, and collaboration is designed with growth in mind.</p>
+        </div>
+        <div class="value-features">
+          <div class="value-feature">
+            <div class="value-feature-icon"><i class="fas fa-gem"></i></div>
+            <div>
+              <h4>Premium Quality</h4>
+              <p>Content designed to perform and impress</p>
+            </div>
+          </div>
+          <div class="value-feature">
+            <div class="value-feature-icon"><i class="fas fa-chart-line"></i></div>
+            <div>
+              <h4>Data-Driven</h4>
+              <p>Growth-focused strategic approach</p>
+            </div>
+          </div>
+          <div class="value-feature">
+            <div class="value-feature-icon"><i class="fas fa-comments"></i></div>
+            <div>
+              <h4>Clear Communication</h4>
+              <p>Reliable delivery every time</p>
+            </div>
+          </div>
+          <div class="value-feature">
+            <div class="value-feature-icon"><i class="fas fa-hand-holding-heart"></i></div>
+            <div>
+              <h4>Affordable Plans</h4>
+              <p>Premium service for growing brands</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY VYKAA ===== -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">The Vykaa Advantage</span>
+        <h2 class="section-title">Why Vykaa Media</h2>
+        <p class="section-subtitle">One partner for content, community, and collaborations. We bring everything under one roof so you can focus on building your brand.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-in">
+          <div class="why-icon"><i class="fas fa-palette"></i></div>
+          <h3>Premium-Quality Content</h3>
+          <p>Every design, reel, and carousel is crafted to capture attention and drive engagement. Content that is designed to perform.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="why-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Data-Driven Approach</h3>
+          <p>We track what works and optimize for growth. Every decision is backed by data and focused on results that matter.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="why-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Clear Communication</h3>
+          <p>No confusion, no delays. We keep you updated at every step with transparent timelines and reliable delivery.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="why-icon"><i class="fas fa-tags"></i></div>
+          <h3>Affordable Plans</h3>
+          <p>Premium agency-level quality at prices built for growing brands and small businesses. Growth shouldn't break the bank.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="why-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>All-In-One Partner</h3>
+          <p>Content creation, community management, and brand collaborations — all handled under one roof. No juggling multiple vendors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Comprehensive social media marketing and content creation services tailored to help your brand grow, engage, and convert.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
+          <h3>Content Creation Services</h3>
+          <p>Scroll-stopping posters, engaging carousels, viral-worthy reels, and high-quality video content — all designed to capture attention and drive results on Instagram and beyond.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="fas fa-users"></i></div>
+          <h3>Brand Collaboration Management</h3>
+          <p>End-to-end management of creator partnerships, influencer collaborations, and strategic brand alliances. We connect you with the right voices to amplify your brand.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="fas fa-comment-dots"></i></div>
+          <h3>Community Management & Messaging</h3>
+          <p>Professional handling of DMs, comments, and audience engagement. We build meaningful conversations that strengthen your brand community and drive loyalty.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="fab fa-instagram"></i></div>
+          <h3>Instagram Page Handling</h3>
+          <p>Complete Instagram page management including scheduling, posting, and performance tracking. Let us handle the day-to-day while you focus on your business.</p>
+          <span class="service-tag"><i class="fas fa-plus-circle"></i> Add-on: ₹3,000 / month</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="fade-in" style="text-align: center;">
+        <span class="section-label">Transparent Pricing</span>
+        <h2 class="section-title">Plans That Fit Your Growth</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Affordable, transparent pricing designed for brands at every stage. No hidden costs, no surprises.</p>
+      </div>
+      <div class="pricing-grid">
+        <!-- BASIC -->
+        <div class="pricing-card fade-in">
+          <div class="pricing-name">Basic Content Kit</div>
+          <div class="pricing-price">₹1,999 <span>/ month</span></div>
+          <div class="pricing-desc">Perfect for brands just getting started with social media content.</div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> 4 Posters</li>
+            <li><i class="fas fa-check"></i> 2 Carousels</li>
+            <li><i class="fas fa-check"></i> 2 Reels</li>
+            <li><i class="fas fa-check"></i> Delivery via Drive / WhatsApp</li>
+            <li><i class="fas fa-check"></i> 1 Revision</li>
+          </ul>
+          <a href="#contact" class="pricing-btn pricing-btn-outline">Get Started</a>
+        </div>
+        <!-- STANDARD -->
+        <div class="pricing-card featured fade-in">
+          <div class="pricing-popular">Most Popular</div>
+          <div class="pricing-name">Standard Content Kit</div>
+          <div class="pricing-price">₹3,999 <span>/ month</span></div>
+          <div class="pricing-desc">Best value for growing brands ready to scale their presence.</div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> 6 Posters</li>
+            <li><i class="fas fa-check"></i> 4 Carousels</li>
+            <li><i class="fas fa-check"></i> 4 Reels</li>
+            <li><i class="fas fa-check"></i> Captions with Hashtags</li>
+            <li><i class="fas fa-check"></i> 2 Revisions</li>
+          </ul>
+          <a href="#contact" class="pricing-btn pricing-btn-filled">Get Started</a>
+        </div>
+        <!-- PREMIUM -->
+        <div class="pricing-card fade-in">
+          <div class="pricing-name">Premium Content Kit</div>
+          <div class="pricing-price">₹6,999 <span>/ month</span></div>
+          <div class="pricing-desc">Full-service content for brands serious about dominating social media.</div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> 8 Posters</li>
+            <li><i class="fas fa-check"></i> 6 Carousels</li>
+            <li><i class="fas fa-check"></i> 8 Reels</li>
+            <li><i class="fas fa-check"></i> Captions with Hashtags</li>
+            <li><i class="fas fa-check"></i> Priority Delivery</li>
+            <li><i class="fas fa-check"></i> 2 Revisions</li>
+          </ul>
+          <a href="#contact" class="pricing-btn pricing-btn-outline">Get Started</a>
+        </div>
+      </div>
+      <div class="pricing-addon fade-in">
+        <p><i class="fab fa-instagram" style="color: var(--accent-light); margin-right: 8px;"></i> Add-on: <strong>Instagram Page Handling — ₹3,000 / month</strong> (available with any plan)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDER ===== -->
+  <section class="section founder-section" id="founder">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">Leadership</span>
+        <h2 class="section-title">About the Founder</h2>
+      </div>
+      <div class="founder-grid fade-in">
+        <div class="founder-image">
+          <img src="kavya.jpg" alt="Kavya Rajendran - Founder of Vykaa Media">
+        </div>
+        <div class="founder-info">
+          <h3>Kavya Rajendran</h3>
+          <div class="founder-role">Founder, Vykaa Media</div>
+          <div class="founder-bio">
+            <p>Kavya Rajendran is the Founder of Vykaa Media with 4+ years of experience in digital marketing. She has worked across multiple sectors, including authoring/publishing, local businesses, and online brands, helping them grow through content strategy, social media marketing, and brand building.</p>
+            <p>With a strong focus on creative storytelling, strategic collaborations, and community growth, Kavya helps brands turn attention into engagement and engagement into results. Her mission is simple: build brands that people trust, follow, and choose.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE WORK WITH ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">Our Clients</span>
+        <h2 class="section-title">Who We Work With</h2>
+        <p class="section-subtitle">We partner with ambitious brands and businesses at every stage of growth.</p>
+      </div>
+      <div class="clients-tags fade-in">
+        <div class="client-tag"><i class="fas fa-store"></i>Small Businesses</div>
+        <div class="client-tag"><i class="fas fa-rocket"></i>Startups</div>
+        <div class="client-tag"><i class="fas fa-user-tie"></i>Personal Brands</div>
+        <div class="client-tag"><i class="fas fa-map-marker-alt"></i>Local Brands</div>
+        <div class="client-tag"><i class="fas fa-globe"></i>Growing Online Businesses</div>
+        <div class="client-tag"><i class="fas fa-book"></i>Authors & Publishers</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="section final-cta" id="contact">
+    <div class="container fade-in">
+      <span class="section-label">Let's Work Together</span>
+      <h2 class="section-title">Ready to Grow Your<br>Brand Online?</h2>
+      <p>Create smarter. Collaborate stronger. Build faster.</p>
+      <div class="cta-buttons">
+        <a href="mailto:vykaamedia@gmail.com" class="btn-primary">
+          <i class="fas fa-envelope"></i>
+          Contact Us
+        </a>
+        <a href="https://wa.me/916382102855" class="btn-secondary" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <img src="logo.png" alt="Vykaa Media Logo">
+            <span class="logo-text">Vykaa<span>Media</span></span>
+          </a>
+          <p>A results-driven brand collaborations and community management agency helping businesses grow through powerful content and strategy.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/vykaamedia" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/916382102855" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:vykaamedia@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#founder">Founder</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <a href="#services">Content Creation</a>
+          <a href="#services">Brand Collaborations</a>
+          <a href="#services">Community Management</a>
+          <a href="#services">Instagram Handling</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vykaa Media. All Rights Reserved.</p>
+        <p>Create. Collaborate. Captivate. Convert.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        nav.classList.remove('open');
+      });
+    });
+
+    // Scroll animation (Intersection Observer)
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
